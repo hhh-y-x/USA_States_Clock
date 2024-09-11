@@ -33,3 +33,16 @@ function setFirstSundayOfNovember() {
 
   return theFirstSunday;
 };
+
+function checkWinterOrSummerTime() {
+  const now = new Date().getTime();
+  const currentYear = new Date().getFullYear();
+ 
+  if (setSecondSundayOfMarch().getTime() <= now && now < setFirstSundayOfNovember().getTime()) {
+    return 'Summer'
+  } else {
+    return 'Winter'
+  };
+};
+
+export { checkWinterOrSummerTime };
