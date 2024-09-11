@@ -15,3 +15,21 @@ function setSecondSundayOfMarch() {
   
   return theSecondSunday;
 };
+
+function setFirstSundayOfNovember() {
+  let theFirstSunday;
+  const currentYear = new Date().getFullYear();
+  
+  for (let i = 1; i <= 7; i++) {
+    let date = new Date(currentYear, 10, i);
+   
+    if (date.getDay() === 0) {
+      theFirstSunday = date;
+      break;
+    };
+   
+    continue;
+  };
+
+  return theFirstSunday;
+};
