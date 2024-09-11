@@ -9,3 +9,7 @@ US States Time Display is a web application that allows users to view and manage
 - **Add States**: Add any US state to the list and see its current local time.
 - **Time Formats**: Toggle between 12-hour and 24-hour time formats for a customized view.
 - **Interactive Interface**: A user-friendly interface to manage and view state times.
+
+## Resources
+
+- The **add circle** icon used in the project was taken from [SVGRepo](https://www.svgrepo.com/svg/528832/add-circle).
