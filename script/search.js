@@ -42,3 +42,16 @@ function search() {
   });
 };
 
+function setClickToState() {
+  const searchItems = document.querySelectorAll('#states li');
+ 
+  searchItems.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      if (event.target.tagName === 'LI') {
+        const chosenLi = event.target;
+        const chosenLiText = event.target.textContent.trim();
+        console.log(chosenLiText);
+      };
+    });
+  });
+};
