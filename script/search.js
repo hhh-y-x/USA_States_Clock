@@ -21,5 +21,24 @@ async function renderStates() {
 
   } catch (error) {
     console.error('Error rendering states:', error);
-  }
-}
+  };
+};
+
+function search() {
+  const value = this.value.trim().toLowerCase();
+  const searchItems = document.querySelectorAll('#states li');
+ 
+  searchItems.forEach(element => {
+    const stateName = element.innerText.trim().toLowerCase();
+    if (value !== '') {
+      if (stateName.includes(value)) {
+        element.classList.remove('hide');
+      } else {
+        element.classList.add('hide');
+      };
+    } else {
+      element.classList.add('hide');
+    };
+  });
+};
+
