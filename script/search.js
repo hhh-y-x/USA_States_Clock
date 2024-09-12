@@ -55,3 +55,5 @@ function setClickToState() {
     });
   });
 };
+
+export { renderStates, setClickToState };
