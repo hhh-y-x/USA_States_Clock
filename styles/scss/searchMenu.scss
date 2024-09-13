@@ -36,6 +36,16 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  &-open {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &-btn {
+    cursor: pointer;
+  }
 }
 
 
