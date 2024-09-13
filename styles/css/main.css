@@ -33,5 +33,20 @@
   text-decoration: none;
   cursor: pointer;
 }
+.search-menu-open {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search-menu-btn {
+  cursor: pointer;
+}
+
+#states li {
+  cursor: pointer;
+}
+#states li.hide {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */
