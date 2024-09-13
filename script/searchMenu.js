@@ -20,3 +20,11 @@ function closeSearchMenu() {
     };
   });
 };
+
+function clearSearchResult() {
+  const searchElement = document.querySelectorAll('#states li');
+ 
+  searchElement.forEach(element => {
+    element.classList.add('hide')
+  });
+};
