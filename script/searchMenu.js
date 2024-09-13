@@ -28,3 +28,5 @@ function clearSearchResult() {
     element.classList.add('hide')
   });
 };
+
+export { openSearchMenu, closeSearchMenu };
