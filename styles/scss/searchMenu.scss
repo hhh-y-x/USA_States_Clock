@@ -48,5 +48,16 @@
   }
 }
 
+#states {
+  & li {
+    cursor: pointer;
+  }
+
+  & li.hide {
+    display: none;
+  }
+}
+
+
 
 
