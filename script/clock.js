@@ -58,3 +58,10 @@ class CreateClockForState {
        localStorage.removeItem(`hidden${this.noSpacesName}`);
     };
 };
+
+class SetClockForState extends CreateClockForState {
+ 
+    constructor(name) {
+      super(name);
+    };
+};  
