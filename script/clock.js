@@ -64,4 +64,22 @@ class SetClockForState extends CreateClockForState {
     constructor(name) {
       super(name);
     };
+
+    async getState() {
+        const statesData = await fetchStates();
+        const state = statesData[this.name];
+        return state;
+      };
+     
+      padZero(timeValue) {
+        return String(timeValue).padStart(2, '0');
+      };
+     
+      adjustTime(hours) {
+        if (hours < 0) {
+          return `${Number(hours) + 24}`
+        };
+       
+        return `${Number(hours)}`
+      };
 };  
