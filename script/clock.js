@@ -146,4 +146,14 @@ class SetClockForState extends CreateClockForState {
    
     return this.adjustTime(this.checkSeason(now, state));
   };
+
+  checkSwitch12or24(now, state) {
+    const switchBox = document.querySelector('.switch-input');
+   
+    if (switchBox.checked) {
+      return this.timeFormat12(now, state);
+    };
+
+    return this.timeFormat24(now, state);
+  };
 };  
