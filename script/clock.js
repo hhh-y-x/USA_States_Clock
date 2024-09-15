@@ -156,4 +156,17 @@ class SetClockForState extends CreateClockForState {
 
     return this.timeFormat24(now, state);
   };
+
+  updateClockAfterTimeFormat(state) {
+    const switchLabel = document.querySelector('.switch-time-format');
+    const stateTime = document.querySelector(`.clock-state-${this.noSpacesName}`);
+    const hoursElement = stateTime.querySelector('.hours');
+   
+    switchLabel.addEventListener('click', () => {
+      const now = new Date();
+      const timeFormatChecker = this.checkSwitch12or24(now, state);
+   
+      hoursElement.textContent = `${this.padZero(timeFormatChecker)}`;
+    });
+  };
 };  
