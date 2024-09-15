@@ -132,4 +132,18 @@ class SetClockForState extends CreateClockForState {
      return setFormatHour
   };
 
+  timeFormat24(now, state) {
+    const secondsSpans = document.querySelectorAll('.seconds');
+    const stateTime = document.querySelector(`.clock-state-${this.noSpacesName}`);
+ 
+    if (!stateTime) {
+      return;
+    } else if (secondsSpans[0].classList.contains('am') || secondsSpans[0].classList.contains('pm')) {
+      secondsSpans.forEach((span) => {
+        span.classList.remove('am', 'pm');
+      });
+    };
+   
+    return this.adjustTime(this.checkSeason(now, state));
+  };
 };  
