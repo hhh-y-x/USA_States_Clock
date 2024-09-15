@@ -91,4 +91,45 @@ class SetClockForState extends CreateClockForState {
    
     return now.getUTCHours() + state.GMTWinter;
   };
+
+  timeFormat12(now, state) {
+    const hoursSpans = document.querySelectorAll('.hours ')
+    const secondsSpans = document.querySelectorAll('.seconds');
+    const stateTime = document.querySelector(`.clock-state-${this.noSpacesName}`);
+    let setFormatHour;
+    let hours = this.adjustTime(this.checkSeason(now, state));
+ 
+    const addClassAmOrPm = () => {
+      const stateElement = document.querySelector(`.clock-state-${this.noSpacesName} .seconds`);
+ 
+      if (Number(hours) < 12) {
+        stateElement.classList.remove('pm');
+        stateElement.classList.add('am');
+      } else if (Number(hours) > 12 ||  Number(hours) === 12) {
+        stateElement.classList.remove('am');
+        stateElement.classList.add('pm');
+      };
+    
+      return;
+  };
+ 
+    if (!stateTime) {
+      return
+    } else if (Number(hours) > 12) {
+      addClassAmOrPm();
+      
+      setFormatHour = this.adjustTime(hours - 12);
+    } else if (Number(hours) === 0) {
+      addClassAmOrPm();
+      
+      setFormatHour = 12;
+    } else if (Number(hours) <= 12) {
+      addClassAmOrPm();
+      
+      setFormatHour = this.adjustTime(hours);
+    };
+ 
+     return setFormatHour
+  };
+
 };  
