@@ -182,5 +182,20 @@ class SetClockForState extends CreateClockForState {
     const minutesElement = stateTime.querySelector('.minutes');
     const secondsElement = stateTime.querySelector('.seconds');
 
+    const updateClock = () => {
+      const now = new Date();
+      const timeFormatChecker = this.checkSwitch12or24(now, state);
+   
+      hoursElement.textContent = `${this.padZero(timeFormatChecker)}`;
+      minutesElement.textContent = ` : ${this.padZero(now.getUTCMinutes())} :`;
+      secondsElement.textContent = this.padZero(now.getUTCSeconds());
+
+      const nextSecond = new Date(now.getTime() + 1000 - now.getMilliseconds());
+      const timeToNextSecond = nextSecond.getTime() - now.getTime();
+
+      setTimeout(updateClock, timeToNextSecond);
+    };
+    
+    updateClock();
   };
 };  
