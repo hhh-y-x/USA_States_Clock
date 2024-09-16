@@ -177,5 +177,10 @@ class SetClockForState extends CreateClockForState {
     if (!stateTime) {
       return;
     };
+
+    const hoursElement = stateTime.querySelector('.hours');
+    const minutesElement = stateTime.querySelector('.minutes');
+    const secondsElement = stateTime.querySelector('.seconds');
+
   };
 };  
