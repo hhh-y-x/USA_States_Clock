@@ -169,4 +169,13 @@ class SetClockForState extends CreateClockForState {
       hoursElement.textContent = `${this.padZero(timeFormatChecker)}`;
     });
   };
+
+  async setTimeForState() {
+    const state = await this.getState();
+    const stateTime = document.querySelector(`.clock-state-${this.noSpacesName}`);
+   
+    if (!stateTime) {
+      return;
+    };
+  };
 };  
