@@ -195,7 +195,9 @@ class SetClockForState extends CreateClockForState {
 
       setTimeout(updateClock, timeToNextSecond);
     };
-    
+
     updateClock();
+
+    this.updateClockAfterTimeFormat(state);
   };
 };  
