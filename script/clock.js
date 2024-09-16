@@ -201,3 +201,5 @@ class SetClockForState extends CreateClockForState {
     this.updateClockAfterTimeFormat(state);
   };
 };  
+
+export { SetClockForState };
