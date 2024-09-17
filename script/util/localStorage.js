@@ -9,4 +9,8 @@ function checkIsStateInLocalStorage(key) {
     return true;
   };
 };
+
+function escapeLiState(stateName) {
+  localStorage.setItem(`hidden${stateName.replaceAll(' ', '')}`, true);
+};
   
