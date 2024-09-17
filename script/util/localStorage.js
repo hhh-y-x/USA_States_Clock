@@ -24,4 +24,22 @@ function checkIsHidden(dataStates) {
     };
   });
 };
+
+function saveTimeFormat() {
+  const switchLabel = document.querySelector('.switch-time-format');
+  const switchBox = document.querySelector('.switch-input');
+  const isChecked = JSON.parse(localStorage.getItem('checkbox'));
+  
+  if (isChecked === null) {
+    localStorage.setItem('checkbox', JSON.stringify(true));
+    switchBox.checked = true;
+  } else {
+    switchBox.checked = isChecked;
+  };
+
+  switchLabel.addEventListener('click', () => {
+    const isChecked = switchBox.checked;
+    localStorage.setItem('checkbox', JSON.stringify(isChecked));
+  });
+};
   
