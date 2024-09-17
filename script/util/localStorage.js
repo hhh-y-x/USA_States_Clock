@@ -42,4 +42,6 @@ function saveTimeFormat() {
     localStorage.setItem('checkbox', JSON.stringify(isChecked));
   });
 };
+
+export { saveStates, checkIsStateInLocalStorage, escapeLiState, checkIsHidden, saveTimeFormat };
   
