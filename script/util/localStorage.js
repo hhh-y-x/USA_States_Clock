@@ -4,5 +4,9 @@ function saveStates(stateName) {
   };
 };
 
-
+function checkIsStateInLocalStorage(key) {
+  if (key.startsWith('state')) {
+    return true;
+  };
+};
   
