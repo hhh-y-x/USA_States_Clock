@@ -20,7 +20,7 @@ async function renderStates() {
     
     ulStates.innerHTML = searchCatalog;
    
-    document.querySelector('#stateSearchInput').addEventListener('input', search);
+    document.querySelector('#state-search-input').addEventListener('input', search);
    
     setClickToState();
    
