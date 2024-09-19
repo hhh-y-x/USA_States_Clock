@@ -3,10 +3,11 @@ import { SetClockForState } from './clock.js';
 import { saveStates , escapeLiState, checkIsHidden, saveTimeFormat } from './util/localStorage.js';
 import { addStatesToDOM } from './addStatesToDOM.js';
 
+
 async function renderStates() {
   try {
     const dataStates = await fetchStates();
-    const ulStates = document.querySelector('#states');
+    const ulStates = document.getElementById('states');
 
     let searchCatalog = '';
     Object.keys(dataStates).forEach(state => {
@@ -18,10 +19,16 @@ async function renderStates() {
     });
     
     ulStates.innerHTML = searchCatalog;
-
-    document.querySelector('#state-search-input').addEventListener('input', search);
+   
+    document.querySelector('#stateSearchInput').addEventListener('input', search);
+   
     setClickToState();
-
+   
+    if (localStorage.length !== 0) {
+      addStatesToDOM()
+      checkIsHidden(dataStates);
+      saveTimeFormat();
+    };
   } catch (error) {
     console.error('Error rendering states:', error);
   };
