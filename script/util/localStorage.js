@@ -44,4 +44,3 @@ function saveTimeFormat() {
 };
 
 export { saveStates, checkIsStateInLocalStorage, escapeLiState, checkIsHidden, saveTimeFormat };
-  
