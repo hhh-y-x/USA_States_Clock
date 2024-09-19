@@ -60,7 +60,17 @@ function setClickToState() {
       if (event.target.tagName === 'LI') {
         const chosenLi = event.target;
         const chosenLiText = event.target.textContent.trim();
-        console.log(chosenLiText);
+       
+        escapeLiState(chosenLiText);
+       
+        let createAndSetTime = new SetClockForState(chosenLiText);
+       
+        createAndSetTime.render();
+        createAndSetTime.setTimeForState();
+   
+        chosenLi.hidden = localStorage.getItem(`hidden${chosenLiText.replaceAll(' ', '')}`);
+       
+        saveStates(chosenLiText);
       };
     });
   });
