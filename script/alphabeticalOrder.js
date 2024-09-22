@@ -16,6 +16,10 @@ async function isInAlphabeticalOrder() {
       };
     });
   });
-
+  
+  observer.observe(clockForState, {
+    childList: true,
+    subtree: false
+  });
 };
 
