@@ -1,3 +1,49 @@
+.switch-container {
+  display: flex;
+  justify-content: center;
+}
+.switch-container .switch-time-format {
+  display: inline-block;
+  position: relative;
+  width: 87px;
+  height: 40px;
+}
+.switch-container .switch-time-format .switch-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.switch-container .switch-time-format .switch-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ecf0f1;
+  border-radius: 1.5px;
+  transition: 0.4s linear;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.switch-container .switch-time-format .switch-slider::before {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background: #bdc3c7;
+  border-radius: 1.5px;
+  transition: 0.4s linear;
+}
+.switch-container .switch-time-format .switch-input:checked + .switch-slider::before {
+  transform: translateX(100%);
+}
+
 .search-menu {
   display: none;
   position: fixed;
