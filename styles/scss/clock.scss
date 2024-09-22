@@ -3,3 +3,10 @@
     flex-direction: column;
 }
   
+.am::after {
+    content: " AM";
+}
+  
+.pm::after {
+    content: " PM";
+}
