@@ -96,7 +96,7 @@
   display: none;
 }
 
-#clockForState {
+#clock-for-states {
   display: flex;
   flex-direction: column;
 }
