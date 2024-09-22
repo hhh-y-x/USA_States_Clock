@@ -43,7 +43,9 @@
           transition: .4s linear;
         }
         
-
+        .switch-input:checked + .switch-slider::before {
+          transform: translateX(100%);
+        }
     }
 }
   
