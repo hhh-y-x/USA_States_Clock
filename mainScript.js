@@ -4,5 +4,7 @@ import { openSearchMenu, closeSearchMenu } from './script/searchMenu.js';
 
 renderStates();
 
+isInAlphabeticalOrder();
+
 openSearchMenu();
 closeSearchMenu();
