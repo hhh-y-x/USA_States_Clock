@@ -50,4 +50,17 @@
   display: none;
 }
 
+#clockForState {
+  display: flex;
+  flex-direction: column;
+}
+
+.am::after {
+  content: "AM";
+}
+
+.pm::after {
+  content: "PM";
+}
+
 /*# sourceMappingURL=main.css.map */
