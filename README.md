@@ -15,3 +15,4 @@ US States Time Display is a web application that allows users to view and manage
 
 - **SVG Icon Source**: The SVG icon for the search button is sourced from [SVG Repo](https://www.svgrepo.com/svg/528832/add-circle).
 - **Favicon**: The US flag emoji favicon is sourced from [Favicon.io](https://favicon.io/emoji-favicons/flag-united-states/).
+- **Google Font**: The font "Fredoka" is sourced from [Google Fonts](https://fonts.google.com/specimen/Fredoka).
