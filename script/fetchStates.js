@@ -1,3 +1,5 @@
+'use strict';
+
 async function fetchStates() {
   try {
     const response = await fetch('./data/GMT.json');

@@ -100,6 +100,15 @@ body {
   transform: translateX(100%);
 }
 
+.search-menu-open {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search-menu-open-btn {
+  cursor: pointer;
+}
+
 .search-menu {
   display: none;
   position: fixed;
@@ -121,14 +130,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.search-menu-open {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.search-menu-btn {
-  cursor: pointer;
-}
 
 .search-content {
   position: absolute;
@@ -144,11 +145,25 @@ body {
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-#states li {
-  cursor: pointer;
+.search-content #state-search-input {
+  display: inline-block;
+  margin-left: 10%;
+  width: 40%;
+  height: 30px;
+  border-radius: 10px;
 }
-#states li.hide {
+.search-content #states li {
+  cursor: pointer;
+  list-style: none;
+  background-color: blue;
+  margin-top: 1%;
+  margin-left: 5%;
+  padding-left: 10%;
+  width: 40%;
+  height: 30px;
+  border-radius: 10px;
+}
+.search-content #states li.hide {
   display: none;
 }
 

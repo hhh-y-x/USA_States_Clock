@@ -1,3 +1,5 @@
+'use strict';
+
 import { fetchStates } from './fetchStates.js';
 
 async function isInAlphabeticalOrder() {

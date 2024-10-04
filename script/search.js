@@ -1,3 +1,5 @@
+'use strict';
+
 import { fetchStates } from './fetchStates.js';
 import { SetClockForState } from './clock.js';
 import { saveStates , escapeLiState, checkIsHidden, saveTimeFormat } from './util/localStorage.js';

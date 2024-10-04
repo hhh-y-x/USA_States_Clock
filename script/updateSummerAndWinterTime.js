@@ -1,3 +1,5 @@
+'use strict';
+
 function setSecondSundayOfMarch() {
   let theSecondSunday;
   const currentYear = new Date().getFullYear();
