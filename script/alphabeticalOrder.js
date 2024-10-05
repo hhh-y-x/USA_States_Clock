@@ -8,7 +8,20 @@ async function isInAlphabeticalOrder() {
   
   const clockForState = document.querySelector('#clock-for-states');
   
+  if (clockForState.childNodes.length > 0) {
+    sortSectionsByStateArray();
+  };
+
   const observer = new MutationObserver(() => {
+    sortSectionsByStateArray();
+  });
+  
+  observer.observe(clockForState, {
+    childList: true,
+    subtree: false
+  });
+
+  function sortSectionsByStateArray() {
     statesArray.forEach((state, index) => {
       const stateNoSpaces = state.trim().replaceAll(' ', '');
       const getStateSection = document.querySelector(`.section${stateNoSpaces}`);
@@ -17,12 +30,7 @@ async function isInAlphabeticalOrder() {
         getStateSection.style.order = index;
       };
     });
-  });
-  
-  observer.observe(clockForState, {
-    childList: true,
-    subtree: false
-  });
+  };
 };
 
 export { isInAlphabeticalOrder };
