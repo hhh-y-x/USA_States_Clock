@@ -56,6 +56,19 @@
   -ms-overflow-style: none; 
 }
 
+#state-search-input {
+  font-family: $primary-font;
+  font-size: large;
+  margin-left: 10%;
+  width: 80%;
+  height: 40px;
+  border-radius: $border-radius;
+  border: 2px solid #ccc;
+  margin-top: 5%;
+  padding: 10px;
+  transition: $transition;
+}
+
 #states {
   & li {
     cursor: pointer;
