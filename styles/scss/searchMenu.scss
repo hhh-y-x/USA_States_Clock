@@ -1,3 +1,13 @@
+.search-menu-open {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &-btn {
+    cursor: pointer;
+  }
+}
+
 .search-menu {
   display: none;
   position: fixed;
@@ -19,16 +29,6 @@
   &-close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
-  }
-
-  &-open {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  &-btn {
     cursor: pointer;
   }
 }

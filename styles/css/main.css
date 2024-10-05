@@ -145,25 +145,11 @@ body {
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.search-content #state-search-input {
-  display: inline-block;
-  margin-left: 10%;
-  width: 40%;
-  height: 30px;
-  border-radius: 10px;
-}
-.search-content #states li {
+
+#states li {
   cursor: pointer;
-  list-style: none;
-  background-color: blue;
-  margin-top: 1%;
-  margin-left: 5%;
-  padding-left: 10%;
-  width: 40%;
-  height: 30px;
-  border-radius: 10px;
 }
-.search-content #states li.hide {
+#states li.hide {
   display: none;
 }
 
