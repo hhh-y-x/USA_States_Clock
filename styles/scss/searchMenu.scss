@@ -33,7 +33,6 @@
   }
 }
 
-
 .search-content {
   position: absolute;
   top: 50%;
@@ -47,6 +46,14 @@
   max-height: 1000px;
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+  
+  -ms-overflow-style: none; 
 }
 
 #states {
