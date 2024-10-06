@@ -48,7 +48,7 @@ q:before, q:after {
 
 @font-face {
   font-family: "Fredoka Regular";
-  src: url(../fonts/Fredoka-Regular.ttf);
+  src: url(../../fonts/Fredoka-Regular.ttf);
 }
 body {
   font-family: "Fredoka Regular", Arial, sans-serif;
