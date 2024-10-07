@@ -1,0 +1,6 @@
+$time-of-day-colors: (
+  morning: linear-gradient(135deg, #ffcc99, #ff6699) /* 5 am - 7 am  */,
+  afternoon: linear-gradient(135deg, #87ceeb, #ffffff) /* 8 am - 5 pm or 8 - 17 */,
+  evening: linear-gradient(135deg, #ff7e5f, #feb47b) /* 6 pm - 8 pm or 18 - 20 */,
+  night: linear-gradient(135deg, #000000, #434343) /* 9 pm - 4 am or 21 - 4 */,
+);
