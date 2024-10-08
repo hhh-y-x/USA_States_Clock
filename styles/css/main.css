@@ -187,6 +187,18 @@ body {
     grid-auto-rows: 150px;
   }
 }
+#clock-for-states .morning {
+  background: linear-gradient(135deg, #ffcc99, #ff6699);
+}
+#clock-for-states .afternoon {
+  background: linear-gradient(135deg, #87ceeb, #ffffff);
+}
+#clock-for-states .evening {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+#clock-for-states .night {
+  background: linear-gradient(135deg, #000000, #434343);
+}
 
 .am::after {
   content: "AM";

@@ -6,6 +6,12 @@
     @media (max-width:768px) {
         @include responsiveClockSection($grid-columns-max-780-px);
     }
+
+    @each $times-of-day, $color in $time-of-day-colors {
+        .#{$times-of-day} {
+            background: $color;
+        }
+    }
 }
   
 .am::after {
