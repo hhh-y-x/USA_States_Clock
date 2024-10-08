@@ -41,9 +41,9 @@ function checkWinterOrSummerTime() {
   const currentYear = new Date().getFullYear();
  
   if (setSecondSundayOfMarch().getTime() <= now && now < setFirstSundayOfNovember().getTime()) {
-    return 'Summer'
+    return 'Summer';
   } else {
-    return 'Winter'
+    return 'Winter';
   };
 };
 
