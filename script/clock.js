@@ -204,6 +204,8 @@ class SetClockForState extends CreateClockForState {
       minutesElement.textContent = ` : ${this.padZero(now.getUTCMinutes())} :`;
       secondsElement.textContent = this.padZero(now.getUTCSeconds());
 
+      this.setDayPeriodClass(Number(this.adjustTime(this.checkSeason(now, state))));
+
       const nextSecond = new Date(now.getTime() + 1000 - now.getMilliseconds());
       const timeToNextSecond = nextSecond.getTime() - now.getTime();
 
