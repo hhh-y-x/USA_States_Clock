@@ -1,8 +1,16 @@
+// reset CSS
 @import "./layout/reset";
+
+//font, variables, mixings, bg for clocks
 @import "./helper/fonts";
 @import "./helper/variables";
 @import "./helper/mixins";
+@import "./helper/timeOfDayColors";
+
+//style for BODY
 @import "./layout/layout";
+
+//12-24 switcher, search menu, style for states clock
 @import "./components/timeZoneSwitcher";
 @import "./components/searchMenu";
 @import "./components/clock";
