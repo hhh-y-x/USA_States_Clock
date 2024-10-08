@@ -1,6 +1,11 @@
 #clock-for-states {
-    display: flex;
-    flex-direction: column;
+    @media (min-width:768px) {
+        @include responsiveClockSection($grid-columns-min-780-px);
+    }
+    
+    @media (max-width:768px) {
+        @include responsiveClockSection($grid-columns-max-780-px);
+    }
 }
   
 .am::after {
