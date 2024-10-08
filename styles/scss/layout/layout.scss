@@ -1,3 +1,9 @@
 body {
     font-family: $primary-font;
 }
+
+.control-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

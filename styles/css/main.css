@@ -48,16 +48,18 @@ q:before, q:after {
 
 @font-face {
   font-family: "Fredoka Regular";
-  src: url(../../fonts/Fredoka-Regular.ttf);
+  src: url(../fonts/Fredoka-Regular.ttf);
 }
 body {
   font-family: "Fredoka Regular", Arial, sans-serif;
 }
 
-.switch-container {
+.control-btns {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+
 .switch-container .switch-time-format {
   display: inline-block;
   position: relative;
@@ -100,12 +102,8 @@ body {
   transform: translateX(100%);
 }
 
-.search-menu-open {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 .search-menu-open-btn {
+  margin-top: 10%;
   cursor: pointer;
 }
 
