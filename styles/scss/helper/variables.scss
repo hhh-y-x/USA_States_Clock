@@ -2,7 +2,11 @@
 $primary-font: "Fredoka Regular", Arial, sans-serif; 
 
 //searchMenu
-$border-radius: 5px;
+$border-search-elements: 2px solid #ccc;
+$width-search-elements: 80%;
+$height-search-elements: 40px;
+$border-radius-search-elements: 5px;
+$padding-search-elements: 10px;
 $transition: box-shadow 0.3s, transform 0.2s, opacity 0.3s ease-in-out;
 
 //clock
