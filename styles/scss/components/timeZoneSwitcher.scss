@@ -14,6 +14,7 @@
         
         .switch-slider {
           position: absolute;
+          cursor: pointer;
           left: 0;
           top: 0;
           right: 0;
@@ -30,7 +31,6 @@
         
         .switch-slider::before {
           content: "";
-          cursor: pointer;
           position: absolute;
           left: 0;
           bottom: 0;
