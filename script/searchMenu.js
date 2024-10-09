@@ -7,11 +7,13 @@ function openSearchMenu() {
 };
 
 function closeSearchMenu() {
-  document.querySelector('.search-menu-close').addEventListener('click', () => {
-    document.querySelector('#state-search-input').value = '';
-    document.querySelector('.search-menu').style.display = "none";
-    clearSearchResult();
-  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.querySelector('#state-search-input').value = '';
+        document.querySelector('.search-menu').style.display = "none";
+        clearSearchResult();
+    };
+  }); 
  
   window.addEventListener('click', (event) => {
     if (event.target.classList.contains('search-menu')) {
