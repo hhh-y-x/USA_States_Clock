@@ -55,18 +55,15 @@
   font-family: $primary-font;
   font-size: large;
   margin-left: 10%;
-  width: 80%;
-  height: 40px;
-  border-radius: $border-radius;
-  border: 2px solid #ccc;
   margin-top: 5%;
-  padding: 10px;
   transition: $transition;
+  @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);
 }
 
 #states {
   & li {
     cursor: pointer;
+    @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);
   }
 
   & li.hide {
