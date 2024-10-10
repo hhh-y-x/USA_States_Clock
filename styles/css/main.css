@@ -177,7 +177,10 @@ body {
   gap: 10px;
 }
 #states li {
+  list-style: none;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
   width: 80%;
   height: 40px;
   border-radius: 5px;

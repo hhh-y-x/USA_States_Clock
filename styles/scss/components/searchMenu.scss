@@ -73,14 +73,17 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  
-  & li {
-    cursor: pointer;
-    @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);
-  }
 
-  & li.hide {
-    display: none;
+  & li {
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);
+    
+    &.hide {
+      display: none;
+    }
   }
 }
 
