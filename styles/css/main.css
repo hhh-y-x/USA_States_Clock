@@ -186,6 +186,9 @@ body {
   border-radius: 5px;
   border: 2px solid #ccc;
   padding: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn ease 0.4s forwards;
 }
 #states li.hide {
   display: none;
@@ -201,6 +204,16 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (min-width: 768px) {
   #clock-for-states {
     display: grid;

@@ -80,6 +80,9 @@
     width: 100%;
     text-align: center;
     @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn ease 0.4s forwards;
     
     &.hide {
       display: none;
@@ -99,6 +102,13 @@
   }
 }
 
-
-
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
