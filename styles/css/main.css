@@ -190,6 +190,9 @@ body {
 #states li.hide {
   display: none;
 }
+#states li:hover {
+  background-color: #c4c4c4;
+}
 
 @media (min-width: 768px) {
   #clock-for-states {
