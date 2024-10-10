@@ -2,7 +2,8 @@
 $primary-font: "Fredoka Regular", Arial, sans-serif; 
 
 //searchMenu
-$border-search-elements: 2px solid #ccc;
+$light-gray: #ccc;
+$border-search-elements: 2px solid $light-gray;
 $width-search-elements: 80%;
 $height-search-elements: 40px;
 $border-radius-search-elements: 5px;
