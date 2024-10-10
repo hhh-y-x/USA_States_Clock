@@ -149,6 +149,13 @@ body {
   display: none;
 }
 
+.search-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 #state-search-input {
   font-family: "Fredoka Regular", Arial, sans-serif;
   font-size: large;
