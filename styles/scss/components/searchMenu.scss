@@ -61,7 +61,6 @@
 #state-search-input {
   font-family: $primary-font;
   font-size: large;
-  margin-left: 10%;
   margin-top: 5%;
   transition: $transition;
   @include searchMenuElements($width-search-elements, $height-search-elements, $border-radius-search-elements, $border-search-elements, $padding-search-elements);

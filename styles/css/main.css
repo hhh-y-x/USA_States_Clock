@@ -159,7 +159,6 @@ body {
 #state-search-input {
   font-family: "Fredoka Regular", Arial, sans-serif;
   font-size: large;
-  margin-left: 10%;
   margin-top: 5%;
   transition: box-shadow 0.3s, transform 0.2s, opacity 0.3s ease-in-out;
   width: 80%;
