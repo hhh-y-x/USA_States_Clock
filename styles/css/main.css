@@ -168,6 +168,14 @@ body {
   padding: 10px;
 }
 
+#states {
+  padding: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 #states li {
   cursor: pointer;
   width: 80%;
