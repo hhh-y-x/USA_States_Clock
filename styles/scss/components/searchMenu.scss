@@ -84,12 +84,17 @@
     &.hide {
       display: none;
     }
-    @media (hover: hover) {
 
+    @media (hover: hover) {
+      &:hover {
+        background-color:  search-li-comp-color($light-gray);
+      }
     }
 
     @media (hover: none) {
-
+      &:active {
+        background-color:  search-li-comp-color($light-gray);
+      }
     }
   }
 }
