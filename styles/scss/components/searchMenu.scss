@@ -42,13 +42,13 @@
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
-
-  scrollbar-width: none;
-  
-  -ms-overflow-style: none; 
 }
 
 #state-search-input {
