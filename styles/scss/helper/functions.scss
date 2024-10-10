@@ -1,0 +1,6 @@
+@function search-li-comp-color($color) {
+    $complement: complement($color);
+    $darker-grey: darken($complement, 3%);
+
+    @return $darker-grey;
+}
