@@ -159,6 +159,8 @@ class SetClockForState extends CreateClockForState {
   setDayPeriodClass(hours) {
     const currentTimeStateSection = document.querySelector(`.section${this.name}`);
     
+    if (!currentTimeStateSection) return;
+
     // 24 format time
     if (hours >= 5 && hours <= 7) {
       currentTimeStateSection.classList.add('morning');
@@ -203,7 +205,7 @@ class SetClockForState extends CreateClockForState {
       hoursElement.textContent = `${this.padZero(timeFormatChecker)}`;
       minutesElement.textContent = ` : ${this.padZero(now.getUTCMinutes())} :`;
       secondsElement.textContent = this.padZero(now.getUTCSeconds());
-
+      
       this.setDayPeriodClass(Number(this.adjustTime(this.checkSeason(now, state))));
 
       const nextSecond = new Date(now.getTime() + 1000 - now.getMilliseconds());
