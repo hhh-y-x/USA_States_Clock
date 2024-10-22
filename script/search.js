@@ -90,6 +90,7 @@ function navigateListWithArrows() {
   
     if (statesInSearchVisible.length === 0) return;
     
+    if (document.activeElement === searchInput) removeClassFocusedForLi();
 
     if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && document.activeElement === searchInput) {
       searchInput.blur();
@@ -125,6 +126,18 @@ function navigateListWithArrows() {
       };
     };
   });
+
+  function removeClassFocusedForLi() {
+    const statesInSearch = document.querySelectorAll('#states li');
+   
+    currentFocusedIndex = -1;
+
+    statesInSearch.forEach((li) => {
+      if (li.classList.contains(focusedClassWithArrow)) {
+        li.classList.remove(focusedClassWithArrow);
+      };
+    });
+  };
 };
 
 export { renderStates, setClickToState };
