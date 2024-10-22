@@ -84,7 +84,16 @@ function navigateListWithArrows() {
   const searchInput = document.querySelector('#state-search-input');
   let currentFocusedIndex = -1;
   const focusedClassWithArrow = 'focuse-with-arrow';
+
+  document.addEventListener('keydown', (event) => {
+    const statesInSearchVisible = document.querySelectorAll('#states li:not(.hide)');
   
+    if (statesInSearchVisible.length === 0) return;
+    
+    if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && document.activeElement === searchInput) {
+      searchInput.blur();
+    };
+  });
 };
 
 export { renderStates, setClickToState };
