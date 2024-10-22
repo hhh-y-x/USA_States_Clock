@@ -88,7 +88,7 @@ function navigateListWithArrows(selectStateAndSetTime) {
   const focusedClassWithArrow = 'focuse-with-arrow';
 
   document.addEventListener('keydown', (event) => {
-    const statesInSearchVisible = document.querySelectorAll('#states li:not(.hide)');
+    const statesInSearchVisible = document.querySelectorAll('#states li:not(.hide):not([hidden])');
   
     if (statesInSearchVisible.length === 0) return;
     
