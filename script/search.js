@@ -138,6 +138,16 @@ function navigateListWithArrows() {
       };
     });
   };
+
+  function removeClassFocusedForLiIfHover() {
+    document.addEventListener('mouseover', (element) => { 
+      if (element.target.tagName === 'LI') {
+        removeClassFocusedForLi();
+      };
+    });
+  };
+
+  removeClassFocusedForLiIfHover();
 };
 
 export { renderStates, setClickToState };
