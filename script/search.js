@@ -127,6 +127,16 @@ function navigateListWithArrows(selectStateAndSetTime) {
         statesInSearchVisible[currentFocusedIndex + 1].classList.remove(focusedClassWithArrow);
       };
     };
+
+    if (event.key === 'Enter') {
+      let chosenLi = {
+        target: document.querySelector(`.${focusedClassWithArrow}`)
+      };
+
+      selectStateAndSetTime(chosenLi);
+      
+      removeClassFocusedForLi();
+    };
   });
 
   function removeClassFocusedForLi() {
