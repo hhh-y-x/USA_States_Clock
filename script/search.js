@@ -56,31 +56,33 @@ function search() {
 
 function setClickToState() {
   const searchItems = document.querySelectorAll('#states li');
+
+  const selectStateAndSetTime = (event) => {
+    if (event.target.tagName === 'LI') {
+      const chosenLi = event.target;
+      const chosenLiText = event.target.textContent.trim();
+     
+      escapeLiState(chosenLiText);
+     
+      let createAndSetTime = new SetClockForState(chosenLiText);
+     
+      createAndSetTime.render();
+      createAndSetTime.setTimeForState();
  
+      chosenLi.hidden = localStorage.getItem(`hidden${chosenLiText.replaceAll(' ', '')}`);
+     
+      saveStates(chosenLiText);
+    };
+  };
+
   searchItems.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      if (event.target.tagName === 'LI') {
-        const chosenLi = event.target;
-        const chosenLiText = event.target.textContent.trim();
-       
-        escapeLiState(chosenLiText);
-       
-        let createAndSetTime = new SetClockForState(chosenLiText);
-       
-        createAndSetTime.render();
-        createAndSetTime.setTimeForState();
-   
-        chosenLi.hidden = localStorage.getItem(`hidden${chosenLiText.replaceAll(' ', '')}`);
-       
-        saveStates(chosenLiText);
-      };
-    });
+    element.addEventListener('click', selectStateAndSetTime);
   });
-  
-  navigateListWithArrows();
+
+  navigateListWithArrows(selectStateAndSetTime);
 };
 
-function navigateListWithArrows() {
+function navigateListWithArrows(selectStateAndSetTime) {
   const searchInput = document.querySelector('#state-search-input');
   let currentFocusedIndex = -1;
   const focusedClassWithArrow = 'focuse-with-arrow';
