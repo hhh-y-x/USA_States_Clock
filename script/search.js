@@ -109,6 +109,20 @@ function navigateListWithArrows() {
       };
 
       statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      
+      currentFocusedIndex--;
+
+      if (currentFocusedIndex < 0) {
+        currentFocusedIndex = statesInSearchVisible.length - 1;
+        
+        statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
+        statesInSearchVisible[0].classList.remove(focusedClassWithArrow)
+      } else if (currentFocusedIndex !== statesInSearchVisible.length - 1){
+        statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
+        statesInSearchVisible[currentFocusedIndex + 1].classList.remove(focusedClassWithArrow);
+      };
     };
   });
 };
