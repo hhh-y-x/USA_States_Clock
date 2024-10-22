@@ -90,8 +90,25 @@ function navigateListWithArrows() {
   
     if (statesInSearchVisible.length === 0) return;
     
+
     if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && document.activeElement === searchInput) {
       searchInput.blur();
+    };
+  
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+
+      currentFocusedIndex++;
+      
+      if ((statesInSearchVisible.length - 1) < currentFocusedIndex) {
+        currentFocusedIndex = 0;
+
+        statesInSearchVisible[statesInSearchVisible.length - 1].classList.remove(focusedClassWithArrow);
+      } else if (currentFocusedIndex > 0) {
+        statesInSearchVisible[currentFocusedIndex - 1].classList.remove(focusedClassWithArrow);
+      };
+
+      statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
     };
   });
 };
