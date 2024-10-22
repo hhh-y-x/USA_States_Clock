@@ -8,7 +8,7 @@ class CreateClockForState {
   constructor(name) {
     this.name = name;
     this.element = null;
-    this.noSpacesName = this.name.trim().replaceAll(' ', '')
+    this.noSpacesName = this.name.trim().replaceAll(' ', '');
   };
 
   render() {
@@ -157,7 +157,7 @@ class SetClockForState extends CreateClockForState {
   };
 
   setDayPeriodClass(hours) {
-    const currentTimeStateSection = document.querySelector(`.section${this.name}`);
+    const currentTimeStateSection = document.querySelector(`.section${this.name.trim().replaceAll(' ', '')}`);
     
     if (!currentTimeStateSection) return;
 
