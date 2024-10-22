@@ -195,7 +195,7 @@ body {
   display: none;
 }
 @media (hover: hover) {
-  #states li:hover {
+  #states li:hover, #states li.focuse-with-arrow {
     background-color: #c4c4c4;
   }
 }

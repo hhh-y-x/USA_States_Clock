@@ -90,14 +90,14 @@
     }
 
     @media (hover: hover) {
-      &:hover {
-        background-color:  search-li-comp-color($light-gray);
+      &:hover, &.focuse-with-arrow {
+        background-color: search-li-comp-color($light-gray);
       }
     }
 
     @media (hover: none) {
       &:active {
-        background-color:  search-li-comp-color($light-gray);
+        background-color: search-li-comp-color($light-gray);
       }
     }
   }
