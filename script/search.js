@@ -76,13 +76,15 @@ function setClickToState() {
       };
     });
   });
+  
+  navigateListWithArrows();
 };
 
 function navigateListWithArrows() {
   const searchInput = document.querySelector('#state-search-input');
   let currentFocusedIndex = -1;
   const focusedClassWithArrow = 'focuse-with-arrow';
-
+  
 };
 
 export { renderStates, setClickToState };
