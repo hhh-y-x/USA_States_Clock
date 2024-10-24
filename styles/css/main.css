@@ -255,6 +255,17 @@ body {
 #clock-for-states .night {
   background: linear-gradient(135deg, #000000, #434343);
 }
+#clock-for-states > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: x-large;
+  color: white;
+}
+#clock-for-states > * svg {
+  fill: white;
+}
 
 .am::after {
   content: "AM";
