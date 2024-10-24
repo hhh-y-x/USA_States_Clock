@@ -163,12 +163,28 @@ class SetClockForState extends CreateClockForState {
 
     // 24 format time
     if (hours >= 5 && hours <= 7) {
+      if (currentTimeStateSection.classList.contains('night')) {
+        currentTimeStateSection.classList.remove('night');
+      };
+
       currentTimeStateSection.classList.add('morning');
     } else if (hours >= 8 && hours <= 17) {
+      if (currentTimeStateSection.classList.contains('morning')) {
+        currentTimeStateSection.classList.remove('morning');
+      };
+
       currentTimeStateSection.classList.add('afternoon');
     } else if (hours >= 18 && hours <= 20) {
+      if (currentTimeStateSection.classList.contains('afternoon')) {
+        currentTimeStateSection.classList.remove('afternoon');
+      };
+
       currentTimeStateSection.classList.add('evening');
-    } else if (hours >= 21 || hours >= 4) {
+    } else if (hours >= 21 || hours <= 4) {
+      if (currentTimeStateSection.classList.contains('evening')) {
+        currentTimeStateSection.classList.remove('evening');
+      };
+
       currentTimeStateSection.classList.add('night');
     };
   };
