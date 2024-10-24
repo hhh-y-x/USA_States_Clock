@@ -22,6 +22,10 @@ class CreateClockForState {
     timeSection.classList.add('stateSection', `section${this.noSpacesName}`);
    
     timeSection.innerHTML = `
+      <figure>
+        <img src="images/flags/128px-Flag_of_${this.noSpacesName}.svg.png" alt="Flag of ${this.name}">
+      </figure>
+
       <div>
         ${this.name}
       </div>
