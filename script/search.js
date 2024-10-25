@@ -112,6 +112,8 @@ function navigateListWithArrows(selectStateAndSetTime) {
       };
 
       statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
+      
+      statesInSearchVisible[currentFocusedIndex].scrollIntoView({ block: 'nearest' });
     } else if (event.key === 'ArrowUp') {
       event.preventDefault();
       
@@ -126,6 +128,8 @@ function navigateListWithArrows(selectStateAndSetTime) {
         statesInSearchVisible[currentFocusedIndex].classList.add(focusedClassWithArrow);
         statesInSearchVisible[currentFocusedIndex + 1].classList.remove(focusedClassWithArrow);
       };
+      
+      statesInSearchVisible[currentFocusedIndex].scrollIntoView({ block: 'nearest' });
     };
 
     if (event.key === 'Enter') {
