@@ -264,15 +264,16 @@ body {
   color: white;
 }
 #clock-for-states > * svg {
+  cursor: pointer;
   fill: white;
 }
 
 .am::after {
-  content: "AM";
+  content: "  AM";
 }
 
 .pm::after {
-  content: "PM";
+  content: " PM";
 }
 
 /*# sourceMappingURL=main.css.map */
