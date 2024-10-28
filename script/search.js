@@ -58,7 +58,9 @@ function setClickToState() {
   const searchItems = document.querySelectorAll('#states li');
 
   const selectStateAndSetTime = (event) => {
-    if (event.target.tagName === 'LI') {
+    const targetElement = event.target || event;
+
+    if (targetElement && targetElement.tagName === 'LI') {
       const chosenLi = event.target;
       const chosenLiText = event.target.textContent.trim();
      
@@ -68,7 +70,7 @@ function setClickToState() {
      
       createAndSetTime.render();
       createAndSetTime.setTimeForState();
- 
+      
       chosenLi.hidden = localStorage.getItem(`hidden${chosenLiText.replaceAll(' ', '')}`);
      
       saveStates(chosenLiText);
