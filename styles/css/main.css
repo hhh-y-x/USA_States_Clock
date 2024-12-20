@@ -54,10 +54,17 @@ body {
   font-family: "Fredoka Regular", Arial, sans-serif;
 }
 
-.control-btns {
+.header {
+  height: 140px;
+  background: #fff;
+}
+.header .control-btns {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .switch-container .switch-time-format {
@@ -269,7 +276,7 @@ body {
 }
 
 .am::after {
-  content: "  AM";
+  content: " AM";
 }
 
 .pm::after {
