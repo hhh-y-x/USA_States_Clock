@@ -1,12 +1,4 @@
 #clock-for-states {
-    @media (min-width:768px) {
-        @include responsiveClockSection($grid-columns-min-780-px);
-    }
-    
-    @media (max-width:768px) {
-        @include responsiveClockSection($grid-columns-max-780-px);
-    }
-
     @each $times-of-day, $color in $time-of-day-colors {
         .#{$times-of-day} {
             background: $color;
@@ -34,4 +26,16 @@
   
 .pm::after {
     content: " PM";
+}
+
+@media (min-width:768px) {
+    #clock-for-states {
+        @include responsiveClockSection($grid-columns-min-780-px);
+    }
+}
+
+@media (max-width:768px) {
+    #clock-for-states {
+        @include responsiveClockSection($grid-columns-max-780-px);
+    }
 }

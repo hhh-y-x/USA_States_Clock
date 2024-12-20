@@ -232,24 +232,6 @@ body {
     transform: translateY(20px);
   }
 }
-@media (min-width: 768px) {
-  #clock-for-states {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 2% 1%;
-    gap: 10px;
-    grid-auto-rows: 150px;
-  }
-}
-@media (max-width: 768px) {
-  #clock-for-states {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 2% 1%;
-    gap: 10px;
-    grid-auto-rows: 150px;
-  }
-}
 #clock-for-states .morning {
   background: linear-gradient(135deg, #ffcc99, #ff6699);
 }
@@ -281,6 +263,25 @@ body {
 
 .pm::after {
   content: " PM";
+}
+
+@media (min-width: 768px) {
+  #clock-for-states {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2% 1%;
+    gap: 10px;
+    grid-auto-rows: 150px;
+  }
+}
+@media (max-width: 768px) {
+  #clock-for-states {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2% 1%;
+    gap: 10px;
+    grid-auto-rows: 150px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
