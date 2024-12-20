@@ -4,7 +4,7 @@ body {
 
 .header {
     height: 140px;
-    background: #fff;
+    background: $header-bg-color;
     
     .control-btns {
         height: 100%;
@@ -14,4 +14,9 @@ body {
         align-items: center;
         justify-content: center;
     }
+}
+
+.main {
+    border-top: $main-border;
+    background-color: $main-bg-color;
 }

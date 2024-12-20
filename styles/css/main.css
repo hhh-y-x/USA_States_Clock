@@ -67,6 +67,11 @@ body {
   justify-content: center;
 }
 
+.main {
+  border-top: 1px solid #DDE2E5;
+  background-color: #F9FAFC;
+}
+
 .switch-container .switch-time-format {
   display: inline-block;
   position: relative;
