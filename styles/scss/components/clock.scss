@@ -49,10 +49,14 @@
 
 .am::after {
     content: " AM";
+    position: absolute;
+    padding-left: 5px;
 }
   
 .pm::after {
     content: " PM";
+    position: absolute;
+    padding-left: 5px;
 }
 
 @media (min-width:768px) {
