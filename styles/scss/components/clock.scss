@@ -30,6 +30,12 @@
     align-self: end;
 }
 
+.watch {
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: start;
+}
+
 .am::after {
     content: " AM";
 }
