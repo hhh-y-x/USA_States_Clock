@@ -15,14 +15,14 @@ class CreateClockForState {
     const clockForState = document.querySelector('#clock-for-states');
    
     if (document.querySelector(`.section${this.noSpacesName}`)) {
-        return;
+      return;
     };
    
     const timeSection = document.createElement('section');
     timeSection.classList.add('stateSection', `section${this.noSpacesName}`);
    
     timeSection.innerHTML = `
-      <figure>
+      <figure class="state-flag">
         <img src="images/flags/128px-Flag_of_${this.noSpacesName}.svg.png" alt="Flag of ${this.name}">
       </figure>
 
@@ -108,7 +108,7 @@ class SetClockForState extends CreateClockForState {
       if (Number(hours) < 12) {
         stateElement.classList.remove('pm');
         stateElement.classList.add('am');
-      } else if (Number(hours) > 12 ||  Number(hours) === 12) {
+      } else if (Number(hours) >= 12) {
         stateElement.classList.remove('am');
         stateElement.classList.add('pm');
       };
