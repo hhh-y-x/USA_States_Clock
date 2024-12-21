@@ -267,6 +267,12 @@ body {
   height: 85px;
 }
 
+.state-name {
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: end;
+}
+
 .am::after {
   content: " AM";
 }
