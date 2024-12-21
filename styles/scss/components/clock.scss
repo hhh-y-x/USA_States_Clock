@@ -13,7 +13,17 @@
     color: $main-primary-color;
     border-radius: $section-border-radius;
 }
-  
+
+.state-flag {
+    grid-row: 1/3;
+    justify-self: center;
+
+    & img {
+        width: 128px;
+        height: 85px;
+    } 
+}
+
 .am::after {
     content: " AM";
 }
@@ -28,7 +38,7 @@
     }
 
     .stateSection {
-        grid-template-columns: 0.8fr 0.8fr 0.5fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
     }
 }
 
