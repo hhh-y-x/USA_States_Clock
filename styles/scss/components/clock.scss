@@ -4,20 +4,14 @@
             background: $color;
         }
     }
+}
 
-    & > * {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        font-size: x-large;
-        color: white;
-
-        & svg {
-            cursor: pointer;
-            fill: white;
-        }
-    }
+.stateSection {
+    display: grid;
+    align-items: center;
+    font-size: $section-font-size;
+    color: $main-primary-color;
+    border-radius: $section-border-radius;
 }
   
 .am::after {
@@ -32,10 +26,18 @@
     #clock-for-states {
         @include responsiveClockSection($grid-columns-min-780-px);
     }
+
+    .stateSection {
+        grid-template-columns: 0.8fr 0.8fr 0.5fr;
+    }
 }
 
 @media (max-width:768px) {
     #clock-for-states {
         @include responsiveClockSection($grid-columns-max-780-px);
+    }
+
+    .stateSection {
+        grid-template-columns: 0.8fr 1fr;
     }
 }
