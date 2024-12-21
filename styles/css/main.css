@@ -269,13 +269,13 @@ body {
 
 .state-name {
   grid-row: 1/2;
-  justify-self: center;
+  justify-self: start;
   align-self: end;
 }
 
 .watch {
   grid-row: 2/3;
-  justify-self: center;
+  justify-self: start;
   align-self: start;
 }
 
