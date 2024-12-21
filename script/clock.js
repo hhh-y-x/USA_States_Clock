@@ -26,7 +26,7 @@ class CreateClockForState {
         <img src="images/flags/128px-Flag_of_${this.noSpacesName}.svg.png" alt="Flag of ${this.name}">
       </figure>
 
-      <div>
+      <div class="state-name">
         ${this.name}
       </div>
       <div class="watch clock-state-${this.noSpacesName}">
