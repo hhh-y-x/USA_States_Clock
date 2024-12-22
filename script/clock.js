@@ -63,6 +63,11 @@ class CreateClockForState {
      
     localStorage.removeItem(`hidden${this.noSpacesName}`);
   };
+
+  isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  };
 };
 
 class SetClockForState extends CreateClockForState {
