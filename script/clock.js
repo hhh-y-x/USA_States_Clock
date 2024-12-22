@@ -52,10 +52,23 @@ class CreateClockForState {
     const removeButton = document.querySelector(`#removeButton${this.noSpacesName}`);
     
     // Added check for removeButton existence to handle mobile devices.
-    if (removeButton && this.isMobile()) {
+    if (this.isMobile()) {
       timeSection.style.gridTemplateColumns = '0.8fr 1fr';
 
-      removeButton.remove();
+      if (removeButton) removeButton.remove();
+
+      // Implement double-tap detection on timeSection for mobile and tablet devices to trigger removeState
+      let lastTouch = 0;
+
+      timeSection.addEventListener('touchstart', (event) => {
+        event.preventDefault();
+
+        let now = new Date().getTime();
+
+        if (now - lastTouch <= 300) this.removeState();
+        
+        lastTouch = now;
+      });
     } else {
       document.body.style.minWidth = '480px';
       timeSection.style.gridTemplateColumns = '0.8fr 0.8fr 0.5fr';
