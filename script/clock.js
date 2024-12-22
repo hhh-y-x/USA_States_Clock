@@ -51,7 +51,12 @@ class CreateClockForState {
    
     const removeButton = document.querySelector(`#removeButton${this.noSpacesName}`);
     
-    removeButton.addEventListener('click', () => this.removeState());
+    // Added check for removeButton existence to handle mobile devices.
+    if (removeButton && this.isMobile()) {
+      removeButton.remove();
+    } else {
+      removeButton.addEventListener('click', () => this.removeState());
+    };
   };
  
   removeState() {
