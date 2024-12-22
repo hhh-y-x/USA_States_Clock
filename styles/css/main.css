@@ -301,7 +301,7 @@ body {
   padding-left: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 950px) {
   #clock-for-states {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -309,20 +309,14 @@ body {
     gap: 10px;
     grid-auto-rows: 150px;
   }
-  .stateSection {
-    grid-template-columns: 0.8fr 0.8fr 0.8fr;
-  }
 }
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   #clock-for-states {
     display: grid;
     grid-template-columns: 1fr;
     margin: 2% 1%;
     gap: 10px;
     grid-auto-rows: 150px;
-  }
-  .stateSection {
-    grid-template-columns: 0.8fr 1fr;
   }
 }
 

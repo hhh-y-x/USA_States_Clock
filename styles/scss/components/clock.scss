@@ -59,22 +59,14 @@
     padding-left: 5px;
 }
 
-@media (min-width:768px) {
+@media (min-width:950px) {
     #clock-for-states {
         @include responsiveClockSection($grid-columns-min-780-px);
     }
-
-    .stateSection {
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    }
 }
 
-@media (max-width:768px) {
+@media (max-width:950px) {
     #clock-for-states {
         @include responsiveClockSection($grid-columns-max-780-px);
-    }
-
-    .stateSection {
-        grid-template-columns: 0.8fr 1fr;
     }
 }
