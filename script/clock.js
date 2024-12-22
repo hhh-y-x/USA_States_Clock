@@ -53,8 +53,13 @@ class CreateClockForState {
     
     // Added check for removeButton existence to handle mobile devices.
     if (removeButton && this.isMobile()) {
+      timeSection.style.gridTemplateColumns = '0.8fr 1fr';
+
       removeButton.remove();
     } else {
+      document.body.style.minWidth = '480px';
+      timeSection.style.gridTemplateColumns = '0.8fr 0.8fr 0.5fr';
+
       removeButton.addEventListener('click', () => this.removeState());
     };
   };
