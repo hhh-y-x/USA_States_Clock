@@ -57,6 +57,13 @@ body {
 .header {
   height: 140px;
   background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 .header .control-btns {
   height: 100%;

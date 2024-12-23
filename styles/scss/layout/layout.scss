@@ -5,7 +5,15 @@ body {
 .header {
     height: 140px;
     background: $header-bg-color;
-    
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-left: 10px;
+
     .control-btns {
         height: 100%;
         width: 100%;
