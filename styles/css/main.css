@@ -326,5 +326,23 @@ body {
     grid-auto-rows: 150px;
   }
 }
+.tooltip {
+  display: none;
+  position: relative;
+}
+.tooltip-bubble {
+  display: none;
+  background: #1C274C;
+  color: white;
+  border-radius: 10px;
+  padding: 10%;
+  text-align: center;
+  width: 129px;
+  height: 51px;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /*# sourceMappingURL=main.css.map */
