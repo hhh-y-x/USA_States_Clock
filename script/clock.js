@@ -52,7 +52,7 @@ class CreateClockForState {
     const removeButton = document.querySelector(`#removeButton${this.noSpacesName}`);
     
     // Added check for removeButton existence to handle mobile devices.
-    if (this.isMobile()) {
+    if (CreateClockForState.isMobile()) {
       timeSection.style.gridTemplateColumns = '0.8fr 1fr';
 
       if (removeButton) removeButton.remove();
@@ -87,7 +87,7 @@ class CreateClockForState {
     localStorage.removeItem(`hidden${this.noSpacesName}`);
   };
 
-  isMobile() {
+  static isMobile() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     return regex.test(navigator.userAgent);
   };
@@ -268,4 +268,4 @@ class SetClockForState extends CreateClockForState {
   };
 };  
 
-export { SetClockForState };
+export {  CreateClockForState ,SetClockForState };
