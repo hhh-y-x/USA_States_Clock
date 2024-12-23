@@ -9,7 +9,7 @@ $main-bg-color:  #F9FAFC;
 $main-border: 1px solid #DDE2E5;
 $main-primary-color: #fff;
 
-//searchMenu
+//components searchMenu
 $light-gray: #ccc;
 $border-search-elements: 2px solid $light-gray;
 $width-search-elements: 80%;
@@ -18,8 +18,17 @@ $border-radius-search-elements: 5px;
 $padding-search-elements: 10px;
 $transition: box-shadow 0.3s, transform 0.2s, opacity 0.3s ease-in-out;
 
-//clock
+//components clock
 $grid-columns-min-780-px: repeat(2, 1fr);
 $grid-columns-max-780-px: 1fr;
 $section-font-size: x-large;
 $section-border-radius: 8px;
+
+//components tooltip
+$tooltip-background: #1C274C;
+$tooltip-text-color: white;
+$tooltip-border-radius: 10px;
+$tooltip-padding: 10%;
+$tooltip-width: 129px;
+$tooltip-height: 51px;
+$tooltip-arrow-size: 10px;
