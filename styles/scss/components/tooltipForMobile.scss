@@ -15,5 +15,15 @@
         top: calc(100% + 10px);
         left: 50%;
         transform: translateX(-50%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            border: 10px solid transparent;
+            border-bottom: #1C274C 10px solid;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
