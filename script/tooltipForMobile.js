@@ -22,4 +22,6 @@ function showTooltipBtnForMobile() {
             bubbleTooltipDiv.style.display = 'none';
         };
     };
+
+    document.addEventListener('click', showTooltipBubble);
 };
