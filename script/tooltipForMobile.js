@@ -6,7 +6,9 @@ function showTooltipBtnForMobile() {
     const tooltipDiv = document.querySelector('.tooltip');
     const descendants = tooltipDiv.querySelectorAll('*');
     const bubbleTooltipDiv = document.querySelector('.tooltip-bubble');
+    const informSideSection = document.querySelector('.inform-side');
 
+    informSideSection.style.display = 'block';
     tooltipDiv.style.display = 'inline-block';
 
     function showTooltipBubble(event) {
