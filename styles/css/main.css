@@ -65,6 +65,9 @@ body {
   padding-top: 10px;
   padding-left: 10px;
 }
+.header .inform-side {
+  display: none;
+}
 .header .control-btns {
   height: 100%;
   width: 100%;
