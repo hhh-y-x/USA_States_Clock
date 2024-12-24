@@ -25,3 +25,5 @@ function showTooltipBtnForMobile() {
 
     document.addEventListener('click', showTooltipBubble);
 };
+
+export {  showTooltipBtnForMobile  };
