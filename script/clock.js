@@ -23,7 +23,7 @@ class CreateClockForState {
    
     timeSection.innerHTML = `
       <figure class="state-flag">
-        <img src="images/flags/128px-Flag_of_${this.noSpacesName}.svg.png" alt="Flag of ${this.name}">
+        <img src="images/flags/128px-Flag_of_${this.noSpacesName}.svg.png" alt="Flag of ${this.name}" loading="lazy">
       </figure>
 
       <div class="state-name">
